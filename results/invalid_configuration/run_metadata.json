@@ -1,0 +1,43 @@
+{
+  "run_id": "combined_obj_ctown__qwen3-32b__WRW__seed_605267865__rep_001",
+  "spec_id": "combined_obj_ctown",
+  "task_kind": "combined_single_multi",
+  "combo": "WRW",
+  "modes": {
+    "parameter_agent": "workflow",
+    "experiment_agent": "react",
+    "running_node": "workflow"
+  },
+  "seed": 605267865,
+  "repeat": 1,
+  "model": {
+    "label": "qwen3-32b",
+    "slug": "qwen3-32b",
+    "profile": "aliyun_qwen",
+    "model": "qwen3-32b",
+    "model_provider": "openai",
+    "backend": null,
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "timeout": 300.0,
+    "extra_body": {
+      "enable_thinking": false
+    },
+    "api_key_env": "DASHSCOPE_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 3000
+  },
+  "run_output_dir": "D:\\Code\\workflow to agentic system\\results\\Qwen_32B_instruct\\combined_obj_ctown\\qwen3-32b\\WRW\\seed_605267865\\rep_001",
+  "console_trace_path": "D:\\Code\\workflow to agentic system\\results\\Qwen_32B_instruct\\combined_obj_ctown\\qwen3-32b\\WRW\\seed_605267865\\rep_001\\run_console_trace.txt",
+  "include_report_agent": false,
+  "allow_human_input": false,
+  "trace_enabled": true,
+  "trace_llm_io": true,
+  "trace_max_chars": 5000,
+  "react_recursion_limit": 50,
+  "started_at_utc": "20260526T093100Z",
+  "finished_at_utc": "20260526T093202Z",
+  "wall_clock_s": 61.54184119999991,
+  "success": false,
+  "error": "ValueError: Algorithm GA is not supported for multi-objective runs. Supported algorithms: AGEMOEA, MOEAD, NSGA2, RVEA, SMSEMOA",
+  "node_failures": []
+}

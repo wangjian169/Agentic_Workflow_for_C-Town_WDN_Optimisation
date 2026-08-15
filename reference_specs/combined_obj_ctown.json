@@ -1,0 +1,53 @@
+{
+  "spec_id": "combined_obj_ctown",
+  "description": "Combined single- and multi-objective C-Town task for control-transfer batch experiments. The baseline is a single-objective pump-energy optimisation, and the comparison run adds modified resilience index to produce a Pareto solution distribution.",
+  "citation": [
+    "Marchi A., Salomons E., Ostfeld A., et al. (2014). Battle of the Water Networks II. J. Water Resour. Plann. Manage., 140(7).",
+    "Sousa J., Muranho J. (2016). Optimal Management of Water Distribution Networks with Simulated Annealing: The C-Town Problem. J. Water Resour. Plann. Manage., 142(5)."
+  ],
+  "objective_parameters": {
+    "inp_path": "ctown.inp",
+    "objectives": ["pump_energy"],
+    "objective_weights": null,
+    "use_epanet_toolkit": true,
+    "demand_model": "PDD",
+    "pressure_min_constraint": 0.0,
+    "minimum_service_pressure": 20.0,
+    "detection_limit": 1.0,
+    "algorithm": {
+      "name": "GA",
+      "kwargs": {
+        "pop_size": 5,
+        "eliminate_duplicates": true
+      }
+    },
+    "termination": {
+      "type": "n_gen",
+      "value": 5
+    },
+    "seed": 1,
+    "verbose": false
+  },
+  "variable_parameters": [
+    {
+      "name": "pump_speed",
+      "items": "ALL_PUMPS",
+      "setter": "pump_speed_masked",
+      "setter_kwargs": {"group_name": "all"},
+      "timeseries": true,
+      "bounds": {"lb": 0.5, "ub": 1.5}
+    }
+  ],
+  "expected_problem_kind": "combined_single_multi",
+  "expected_algorithm_family": ["ga", "nsga2"],
+  "expected_experiment_design": {
+    "baseline": "single-objective pump_energy with GA",
+    "comparison": "multi-objective pump_energy + modified_resilience_index with NSGA-II"
+  },
+  "output_requirements": {
+    "plot_variable_timeseries": false,
+    "required_figure_categories": ["objective"],
+    "min_objective_figures": 2,
+    "min_variable_figures": 0
+  }
+}

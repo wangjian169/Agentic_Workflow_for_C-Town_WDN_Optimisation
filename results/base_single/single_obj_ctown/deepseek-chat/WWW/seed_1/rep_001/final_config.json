@@ -1,0 +1,176 @@
+{
+  "objective_parameters": {
+    "inp_path": "ctown.inp",
+    "objectives": [
+      "pump_energy"
+    ],
+    "use_epanet_toolkit": true,
+    "demand_model": "PDD",
+    "pressure_min_constraint": 0.0,
+    "minimum_service_pressure": 20.0,
+    "detection_limit": 1.0,
+    "algorithm": {
+      "name": "ga",
+      "kwargs": {
+        "pop_size": 50,
+        "eliminate_duplicates": true
+      }
+    },
+    "termination": {
+      "type": "n_gen",
+      "value": 50.0
+    },
+    "seed": 1,
+    "verbose": true
+  },
+  "variable_parameters": [
+    {
+      "name": "pump_speed",
+      "items": "ALL_PUMPS",
+      "setter": "pump_speed_masked",
+      "setter_kwargs": {
+        "group_name": "all"
+      },
+      "timeseries": true,
+      "bounds": {
+        "lb": 0.5,
+        "ub": 1.5
+      }
+    }
+  ],
+  "experiments": [
+    {
+      "name": "baseline",
+      "description": "Baseline configuration with no overrides.",
+      "objective_parameters": {
+        "inp_path": "ctown.inp",
+        "objectives": [
+          "pump_energy"
+        ],
+        "use_epanet_toolkit": true,
+        "demand_model": "PDD",
+        "pressure_min_constraint": 0.0,
+        "minimum_service_pressure": 20.0,
+        "detection_limit": 1.0,
+        "algorithm": {
+          "name": "ga",
+          "kwargs": {
+            "pop_size": 50,
+            "eliminate_duplicates": true
+          }
+        },
+        "termination": {
+          "type": "n_gen",
+          "value": 50.0
+        },
+        "seed": 1,
+        "verbose": true
+      },
+      "variable_parameters": [
+        {
+          "name": "pump_speed",
+          "items": "ALL_PUMPS",
+          "setter": "pump_speed_masked",
+          "setter_kwargs": {
+            "group_name": "all"
+          },
+          "timeseries": true,
+          "bounds": {
+            "lb": 0.5,
+            "ub": 1.5
+          }
+        }
+      ]
+    },
+    {
+      "name": "whatif_stricter_pressure",
+      "description": "Increase minimum service pressure from 20.0 to 25.0 m to test sensitivity to pressure requirements.",
+      "objective_parameters": {
+        "inp_path": "ctown.inp",
+        "objectives": [
+          "pump_energy"
+        ],
+        "use_epanet_toolkit": true,
+        "demand_model": "PDD",
+        "pressure_min_constraint": 0.0,
+        "minimum_service_pressure": 25.0,
+        "detection_limit": 1.0,
+        "algorithm": {
+          "name": "ga",
+          "kwargs": {
+            "pop_size": 50,
+            "eliminate_duplicates": true
+          }
+        },
+        "termination": {
+          "type": "n_gen",
+          "value": 50.0
+        },
+        "seed": 1,
+        "verbose": true
+      },
+      "variable_parameters": [
+        {
+          "name": "pump_speed",
+          "items": "ALL_PUMPS",
+          "setter": "pump_speed_masked",
+          "setter_kwargs": {
+            "group_name": "all"
+          },
+          "timeseries": true,
+          "bounds": {
+            "lb": 0.5,
+            "ub": 1.5
+          }
+        }
+      ]
+    },
+    {
+      "name": "whatif_tightened_speed_range",
+      "description": "Narrow pump-speed bounds from [0.5, 1.5] to [0.8, 1.2] to test sensitivity to operating range restrictions.",
+      "objective_parameters": {
+        "inp_path": "ctown.inp",
+        "objectives": [
+          "pump_energy"
+        ],
+        "use_epanet_toolkit": true,
+        "demand_model": "PDD",
+        "pressure_min_constraint": 0.0,
+        "minimum_service_pressure": 20.0,
+        "detection_limit": 1.0,
+        "algorithm": {
+          "name": "ga",
+          "kwargs": {
+            "pop_size": 50,
+            "eliminate_duplicates": true
+          }
+        },
+        "termination": {
+          "type": "n_gen",
+          "value": 50.0
+        },
+        "seed": 1,
+        "verbose": true
+      },
+      "variable_parameters": [
+        {
+          "name": "pump_speed",
+          "items": "ALL_PUMPS",
+          "setter": "pump_speed_masked",
+          "setter_kwargs": {
+            "group_name": "all"
+          },
+          "timeseries": true,
+          "bounds": {
+            "lb": 0.8,
+            "ub": 1.2
+          }
+        }
+      ]
+    }
+  ],
+  "parameter_status": "COMPLETE",
+  "missing_keys": [],
+  "parameter_questions": [],
+  "reference_fallback_used": false
+}

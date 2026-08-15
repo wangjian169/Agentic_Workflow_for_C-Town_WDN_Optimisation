@@ -1,0 +1,20 @@
+{
+  "experiment_results": [],
+  "figure_info": [],
+  "output_completeness": {
+    "has_experiment_results": false,
+    "n_experiment_results": 0,
+    "has_objective_figure": false,
+    "has_variable_figure": false,
+    "n_objective_figures": 0,
+    "n_variable_figures": 0,
+    "n_figures": 0,
+    "required_figure_categories": [
+      "objective"
+    ],
+    "min_objective_figures": 2,
+    "min_variable_figures": 0,
+    "report_present": false,
+    "complete": false
+  }
+}

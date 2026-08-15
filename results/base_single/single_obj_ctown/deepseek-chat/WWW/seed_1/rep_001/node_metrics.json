@@ -1,0 +1,97 @@
+{
+  "planning_agent": {
+    "mode": "workflow",
+    "wall_clock_s": 8.815379700004996,
+    "n_llm_calls": 2,
+    "n_tool_calls": 0,
+    "tool_call_log": [],
+    "token_usage": {
+      "input_tokens": 1388,
+      "input_cache_tokens": 512,
+      "output_tokens": 651,
+      "total_tokens": 2039
+    },
+    "n_user_interactions": 0,
+    "success": true,
+    "trajectory_steps": 0,
+    "configuration_set": [],
+    "deviations_from_reference": [],
+    "error": null
+  },
+  "parameter_agent": {
+    "mode": "workflow",
+    "wall_clock_s": 109.60599070000171,
+    "n_llm_calls": 3,
+    "n_tool_calls": 0,
+    "tool_call_log": [],
+    "token_usage": {
+      "input_tokens": 36420,
+      "input_cache_tokens": 27904,
+      "output_tokens": 2780,
+      "total_tokens": 39200
+    },
+    "n_user_interactions": 0,
+    "success": true,
+    "trajectory_steps": 0,
+    "configuration_set": [],
+    "deviations_from_reference": [],
+    "error": null
+  },
+  "experiment_agent": {
+    "mode": "workflow",
+    "wall_clock_s": 6.616749000000709,
+    "n_llm_calls": 1,
+    "n_tool_calls": 0,
+    "tool_call_log": [],
+    "token_usage": {
+      "input_tokens": 3639,
+      "input_cache_tokens": 0,
+      "output_tokens": 812,
+      "total_tokens": 4451
+    },
+    "n_user_interactions": 0,
+    "success": true,
+    "trajectory_steps": 0,
+    "configuration_set": [],
+    "deviations_from_reference": [],
+    "error": null
+  },
+  "running_node": {
+    "mode": "workflow",
+    "wall_clock_s": 5460.3539303,
+    "n_llm_calls": 0,
+    "n_tool_calls": 0,
+    "tool_call_log": [],
+    "token_usage": {
+      "input_tokens": 0,
+      "input_cache_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0
+    },
+    "n_user_interactions": 0,
+    "success": true,
+    "trajectory_steps": 0,
+    "configuration_set": [],
+    "deviations_from_reference": [],
+    "error": null
+  },
+  "report_agent": {
+    "mode": "workflow",
+    "wall_clock_s": 30.420485499998904,
+    "n_llm_calls": 2,
+    "n_tool_calls": 0,
+    "tool_call_log": [],
+    "token_usage": {
+      "input_tokens": 11549,
+      "input_cache_tokens": 0,
+      "output_tokens": 958,
+      "total_tokens": 12507
+    },
+    "n_user_interactions": 0,
+    "success": true,
+    "trajectory_steps": 0,
+    "configuration_set": [],
+    "deviations_from_reference": [],
+    "error": null
+  }
+}

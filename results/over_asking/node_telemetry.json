@@ -1,0 +1,33 @@
+{
+  "by_node": {},
+  "groups": {
+    "core": {
+      "nodes": [],
+      "wall_clock_s": 0.0,
+      "n_llm_calls": 0,
+      "n_tool_calls": 0,
+      "n_user_interactions": 0,
+      "trajectory_steps": 0,
+      "token_usage": {
+        "input_tokens": 0,
+        "input_cache_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0
+      }
+    },
+    "all": {
+      "nodes": [],
+      "wall_clock_s": 0.0,
+      "n_llm_calls": 0,
+      "n_tool_calls": 0,
+      "n_user_interactions": 0,
+      "trajectory_steps": 0,
+      "token_usage": {
+        "input_tokens": 0,
+        "input_cache_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0
+      }
+    }
+  }
+}

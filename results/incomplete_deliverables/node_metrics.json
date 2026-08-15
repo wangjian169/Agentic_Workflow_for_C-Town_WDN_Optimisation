@@ -1,0 +1,105 @@
+{
+  "planning_agent": {
+    "mode": "workflow",
+    "wall_clock_s": 13.46289790001174,
+    "n_llm_calls": 2,
+    "n_tool_calls": 0,
+    "tool_call_log": [],
+    "token_usage": {
+      "input_tokens": 1321,
+      "input_cache_tokens": 0,
+      "output_tokens": 435,
+      "total_tokens": 1756
+    },
+    "n_user_interactions": 0,
+    "success": true,
+    "trajectory_steps": 0,
+    "configuration_set": [],
+    "deviations_from_reference": [],
+    "error": null
+  },
+  "parameter_agent": {
+    "mode": "workflow",
+    "wall_clock_s": 7.745672100005322,
+    "n_llm_calls": 1,
+    "n_tool_calls": 0,
+    "tool_call_log": [],
+    "token_usage": {
+      "input_tokens": 4301,
+      "input_cache_tokens": 0,
+      "output_tokens": 268,
+      "total_tokens": 4569
+    },
+    "n_user_interactions": 0,
+    "success": true,
+    "trajectory_steps": 0,
+    "configuration_set": [],
+    "deviations_from_reference": [],
+    "error": null
+  },
+  "experiment_agent": {
+    "mode": "react",
+    "wall_clock_s": 14.14722630000324,
+    "n_llm_calls": 5,
+    "n_tool_calls": 4,
+    "tool_call_log": [
+      {
+        "tool": "read_baseline",
+        "payload": null,
+        "t": 1779802433.7316895
+      },
+      {
+        "tool": "propose_experiment",
+        "payload": {
+          "name": "multi_objective"
+        },
+        "t": 1779802435.9644055
+      },
+      {
+        "tool": "list_experiments",
+        "payload": null,
+        "t": 1779802438.5313442
+      },
+      {
+        "tool": "commit_experiments",
+        "payload": null,
+        "t": 1779802439.8363287
+      }
+    ],
+    "token_usage": {
+      "input_tokens": 9905,
+      "input_cache_tokens": 0,
+      "output_tokens": 416,
+      "total_tokens": 10321
+    },
+    "n_user_interactions": 0,
+    "success": true,
+    "trajectory_steps": 10,
+    "configuration_set": [],
+    "deviations_from_reference": [],
+    "error": null,
+    "react_recursion_limit": 50,
+    "react_llm_callback_calls": 5,
+    "react_token_callback_recorded": true,
+    "termination_reason": null
+  },
+  "running_node": {
+    "mode": "workflow",
+    "wall_clock_s": 54.05166489999101,
+    "n_llm_calls": 0,
+    "n_tool_calls": 0,
+    "tool_call_log": [],
+    "token_usage": {
+      "input_tokens": 0,
+      "input_cache_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0
+    },
+    "n_user_interactions": 0,
+    "success": true,
+    "trajectory_steps": 0,
+    "configuration_set": [],
+    "deviations_from_reference": [],
+    "error": null
+  }
+}

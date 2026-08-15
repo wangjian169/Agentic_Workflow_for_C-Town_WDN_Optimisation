@@ -1,0 +1,226 @@
+{
+  "experiment_results": [
+    {
+      "name": "baseline",
+      "objectives": [
+        "pump_energy"
+      ],
+      "objective_parameters": {
+        "inp_path": "D:\\Code\\workflow to agentic system\\networks\\ctown.inp",
+        "objectives": [
+          "pump_energy"
+        ],
+        "use_epanet_toolkit": true,
+        "demand_model": "PDD",
+        "pressure_min_constraint": 0.0,
+        "minimum_service_pressure": 20.0,
+        "detection_limit": 1.0,
+        "algorithm": {
+          "name": "ga",
+          "kwargs": {
+            "pop_size": 50,
+            "eliminate_duplicates": true
+          }
+        },
+        "termination": {
+          "type": "n_gen",
+          "value": 50.0
+        },
+        "seed": 1,
+        "verbose": true
+      },
+      "variable_parameters": [
+        {
+          "name": "pump_speed",
+          "items": "ALL_PUMPS",
+          "setter": "pump_speed_masked",
+          "setter_kwargs": {
+            "group_name": "all"
+          },
+          "timeseries": true,
+          "bounds": {
+            "lb": 0.5,
+            "ub": 1.5
+          }
+        }
+      ],
+      "F": [
+        [
+          36835.56507409212
+        ]
+      ],
+      "F_shape": [
+        1,
+        1
+      ],
+      "F_min": [
+        36835.56507409212
+      ],
+      "F_mean": [
+        36835.56507409212
+      ],
+      "F_finite": true
+    },
+    {
+      "name": "whatif_stricter_pressure",
+      "objectives": [
+        "pump_energy"
+      ],
+      "objective_parameters": {
+        "inp_path": "D:\\Code\\workflow to agentic system\\networks\\ctown.inp",
+        "objectives": [
+          "pump_energy"
+        ],
+        "use_epanet_toolkit": true,
+        "demand_model": "PDD",
+        "pressure_min_constraint": 0.0,
+        "minimum_service_pressure": 25.0,
+        "detection_limit": 1.0,
+        "algorithm": {
+          "name": "ga",
+          "kwargs": {
+            "pop_size": 50,
+            "eliminate_duplicates": true
+          }
+        },
+        "termination": {
+          "type": "n_gen",
+          "value": 50.0
+        },
+        "seed": 1,
+        "verbose": true
+      },
+      "variable_parameters": [
+        {
+          "name": "pump_speed",
+          "items": "ALL_PUMPS",
+          "setter": "pump_speed_masked",
+          "setter_kwargs": {
+            "group_name": "all"
+          },
+          "timeseries": true,
+          "bounds": {
+            "lb": 0.5,
+            "ub": 1.5
+          }
+        }
+      ],
+      "F": [
+        [
+          35661.01480658859
+        ]
+      ],
+      "F_shape": [
+        1,
+        1
+      ],
+      "F_min": [
+        35661.01480658859
+      ],
+      "F_mean": [
+        35661.01480658859
+      ],
+      "F_finite": true
+    },
+    {
+      "name": "whatif_tightened_speed_range",
+      "objectives": [
+        "pump_energy"
+      ],
+      "objective_parameters": {
+        "inp_path": "D:\\Code\\workflow to agentic system\\networks\\ctown.inp",
+        "objectives": [
+          "pump_energy"
+        ],
+        "use_epanet_toolkit": true,
+        "demand_model": "PDD",
+        "pressure_min_constraint": 0.0,
+        "minimum_service_pressure": 20.0,
+        "detection_limit": 1.0,
+        "algorithm": {
+          "name": "ga",
+          "kwargs": {
+            "pop_size": 50,
+            "eliminate_duplicates": true
+          }
+        },
+        "termination": {
+          "type": "n_gen",
+          "value": 50.0
+        },
+        "seed": 1,
+        "verbose": true
+      },
+      "variable_parameters": [
+        {
+          "name": "pump_speed",
+          "items": "ALL_PUMPS",
+          "setter": "pump_speed_masked",
+          "setter_kwargs": {
+            "group_name": "all"
+          },
+          "timeseries": true,
+          "bounds": {
+            "lb": 0.8,
+            "ub": 1.2
+          }
+        }
+      ],
+      "F": [
+        [
+          35282.62455074737
+        ]
+      ],
+      "F_shape": [
+        1,
+        1
+      ],
+      "F_min": [
+        35282.62455074737
+      ],
+      "F_mean": [
+        35282.62455074737
+      ],
+      "F_finite": true
+    }
+  ],
+  "figure_info": [
+    {
+      "path": "D:\\Code\\workflow to agentic system\\results\\base_single\\single_obj_ctown\\deepseek-chat\\WWW\\seed_1\\rep_001\\opt_results__single_objectives.png",
+      "category": "objective",
+      "description": "Objective values / convergence curves or Pareto fronts."
+    },
+    {
+      "path": "D:\\Code\\workflow to agentic system\\results\\base_single\\single_obj_ctown\\deepseek-chat\\WWW\\seed_1\\rep_001\\vars__baseline__pump_speed__timeseries.png",
+      "category": "variables",
+      "description": "Representative time-series trajectories for optimised decision variables."
+    },
+    {
+      "path": "D:\\Code\\workflow to agentic system\\results\\base_single\\single_obj_ctown\\deepseek-chat\\WWW\\seed_1\\rep_001\\vars__whatif_stricter_pressure__pump_speed__timeseries.png",
+      "category": "variables",
+      "description": "Representative time-series trajectories for optimised decision variables."
+    },
+    {
+      "path": "D:\\Code\\workflow to agentic system\\results\\base_single\\single_obj_ctown\\deepseek-chat\\WWW\\seed_1\\rep_001\\vars__whatif_tightened_speed_range__pump_speed__timeseries.png",
+      "category": "variables",
+      "description": "Representative time-series trajectories for optimised decision variables."
+    }
+  ],
+  "output_completeness": {
+    "has_experiment_results": true,
+    "n_experiment_results": 3,
+    "has_objective_figure": true,
+    "has_variable_figure": true,
+    "n_objective_figures": 1,
+    "n_variable_figures": 3,
+    "n_figures": 4,
+    "required_figure_categories": [
+      "objective",
+      "variables"
+    ],
+    "min_objective_figures": 1,
+    "min_variable_figures": 1,
+    "report_present": true,
+    "complete": true
+  }
+}

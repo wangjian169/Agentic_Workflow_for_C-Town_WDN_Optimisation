@@ -1,0 +1,124 @@
+[
+  {
+    "node": "parameter_agent",
+    "mode": "react",
+    "field": "inp_path",
+    "value": "ctown.inp",
+    "t": 1778793256.4392927
+  },
+  {
+    "node": "parameter_agent",
+    "mode": "react",
+    "field": "objectives",
+    "value": [
+      "pump_energy",
+      "modified_resilience_index"
+    ],
+    "t": 1778793256.4402926
+  },
+  {
+    "node": "parameter_agent",
+    "mode": "react",
+    "field": "seed",
+    "value": 1,
+    "t": 1778793256.4402926
+  },
+  {
+    "node": "parameter_agent",
+    "mode": "react",
+    "field": "demand_model",
+    "value": "PDD",
+    "t": 1778793271.9549265
+  },
+  {
+    "node": "parameter_agent",
+    "mode": "react",
+    "field": "minimum_service_pressure",
+    "value": 20.0,
+    "t": 1778793282.49096
+  },
+  {
+    "node": "parameter_agent",
+    "mode": "react",
+    "field": "pressure_min_constraint",
+    "value": 0.0,
+    "t": 1778793290.8077
+  },
+  {
+    "node": "parameter_agent",
+    "mode": "react",
+    "field": "algorithm.kwargs.pop_size",
+    "value": 50,
+    "t": 1778793308.8950126
+  },
+  {
+    "node": "parameter_agent",
+    "mode": "react",
+    "field": "termination.type",
+    "value": "n_gen",
+    "t": 1778793308.8950126
+  },
+  {
+    "node": "parameter_agent",
+    "mode": "react",
+    "field": "algorithm.name",
+    "value": "NSGA2",
+    "t": 1778793308.896012
+  },
+  {
+    "node": "parameter_agent",
+    "mode": "react",
+    "field": "termination.value",
+    "value": 50,
+    "t": 1778793308.8970118
+  },
+  {
+    "node": "parameter_agent",
+    "mode": "react",
+    "field": "variable.pump_speed.name",
+    "value": "pump_speed",
+    "t": 1778793348.6913712
+  },
+  {
+    "node": "parameter_agent",
+    "mode": "react",
+    "field": "variable.pump_speed.items",
+    "value": "ALL_PUMPS",
+    "t": 1778793348.692374
+  },
+  {
+    "node": "parameter_agent",
+    "mode": "react",
+    "field": "variable.pump_speed.setter",
+    "value": "pump_speed_masked",
+    "t": 1778793348.6943734
+  },
+  {
+    "node": "parameter_agent",
+    "mode": "react",
+    "field": "variable.pump_speed.setter_kwargs.group_name",
+    "value": "all",
+    "t": 1778793348.6943734
+  },
+  {
+    "node": "parameter_agent",
+    "mode": "react",
+    "field": "variable.pump_speed.timeseries",
+    "value": true,
+    "t": 1778793348.6954076
+  },
+  {
+    "node": "parameter_agent",
+    "mode": "react",
+    "field": "variable.pump_speed.bounds.lb",
+    "value": 0.5,
+    "t": 1778793348.6963716
+  },
+  {
+    "node": "parameter_agent",
+    "mode": "react",
+    "field": "variable.pump_speed.bounds.ub",
+    "value": 1.5,
+    "t": 1778793348.6973708
+  }
+]

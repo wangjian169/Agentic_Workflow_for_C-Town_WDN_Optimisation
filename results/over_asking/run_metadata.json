@@ -1,0 +1,43 @@
+{
+  "run_id": "combined_obj_ctown__qwen3-14b__RWW__seed_470568584__rep_001",
+  "spec_id": "combined_obj_ctown",
+  "task_kind": "combined_single_multi",
+  "combo": "RWW",
+  "modes": {
+    "parameter_agent": "react",
+    "experiment_agent": "workflow",
+    "running_node": "workflow"
+  },
+  "seed": 470568584,
+  "repeat": 1,
+  "model": {
+    "label": "qwen3-14b",
+    "slug": "qwen3-14b",
+    "profile": "aliyun_qwen",
+    "model": "qwen3-14b",
+    "model_provider": "openai",
+    "backend": null,
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "timeout": 300.0,
+    "extra_body": {
+      "enable_thinking": false
+    },
+    "api_key_env": "DASHSCOPE_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 3000
+  },
+  "run_output_dir": "D:\\Code\\workflow to agentic system\\results\\Qwen_14B_instruct\\combined_obj_ctown\\qwen3-14b\\RWW\\seed_470568584\\rep_001",
+  "console_trace_path": "D:\\Code\\workflow to agentic system\\results\\Qwen_14B_instruct\\combined_obj_ctown\\qwen3-14b\\RWW\\seed_470568584\\rep_001\\run_console_trace.txt",
+  "include_report_agent": false,
+  "allow_human_input": false,
+  "trace_enabled": true,
+  "trace_llm_io": true,
+  "trace_max_chars": 5000,
+  "react_recursion_limit": 50,
+  "started_at_utc": "20260526T105247Z",
+  "finished_at_utc": "20260526T105345Z",
+  "wall_clock_s": 57.11933949998638,
+  "success": false,
+  "error": "RuntimeError: parameter_agent requires additional user input, but allow_human_input is False. Missing keys: unknown fields",
+  "node_failures": []
+}

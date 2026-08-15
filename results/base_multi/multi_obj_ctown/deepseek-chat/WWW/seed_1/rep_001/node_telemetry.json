@@ -1,0 +1,151 @@
+{
+  "by_node": {
+    "planning_agent": {
+      "mode": "workflow",
+      "success": true,
+      "wall_clock_s": 13.272210700000869,
+      "n_llm_calls": 3,
+      "n_tool_calls": 0,
+      "n_user_interactions": 0,
+      "trajectory_steps": 0,
+      "token_usage": {
+        "input_tokens": 2525,
+        "input_cache_tokens": 256,
+        "output_tokens": 1024,
+        "total_tokens": 3549
+      },
+      "tool_call_log": [],
+      "termination_reason": null,
+      "error": null
+    },
+    "parameter_agent": {
+      "mode": "workflow",
+      "success": true,
+      "wall_clock_s": 121.28742030000285,
+      "n_llm_calls": 4,
+      "n_tool_calls": 0,
+      "n_user_interactions": 0,
+      "trajectory_steps": 0,
+      "token_usage": {
+        "input_tokens": 72531,
+        "input_cache_tokens": 54144,
+        "output_tokens": 4481,
+        "total_tokens": 77012
+      },
+      "tool_call_log": [],
+      "termination_reason": null,
+      "error": null
+    },
+    "experiment_agent": {
+      "mode": "workflow",
+      "success": true,
+      "wall_clock_s": 7.726472999995167,
+      "n_llm_calls": 1,
+      "n_tool_calls": 0,
+      "n_user_interactions": 0,
+      "trajectory_steps": 0,
+      "token_usage": {
+        "input_tokens": 4295,
+        "input_cache_tokens": 0,
+        "output_tokens": 957,
+        "total_tokens": 5252
+      },
+      "tool_call_log": [],
+      "termination_reason": null,
+      "error": null
+    },
+    "running_node": {
+      "mode": "workflow",
+      "success": true,
+      "wall_clock_s": 5280.571607999998,
+      "n_llm_calls": 0,
+      "n_tool_calls": 0,
+      "n_user_interactions": 0,
+      "trajectory_steps": 0,
+      "token_usage": {
+        "input_tokens": 0,
+        "input_cache_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0
+      },
+      "tool_call_log": [],
+      "termination_reason": null,
+      "error": null
+    },
+    "report_agent": {
+      "mode": "workflow",
+      "success": true,
+      "wall_clock_s": 31.130250200003502,
+      "n_llm_calls": 2,
+      "n_tool_calls": 0,
+      "n_user_interactions": 0,
+      "trajectory_steps": 0,
+      "token_usage": {
+        "input_tokens": 15378,
+        "input_cache_tokens": 0,
+        "output_tokens": 953,
+        "total_tokens": 16331
+      },
+      "tool_call_log": [],
+      "termination_reason": null,
+      "error": null
+    }
+  },
+  "groups": {
+    "core": {
+      "nodes": [
+        "planning_agent",
+        "parameter_agent",
+        "experiment_agent",
+        "running_node"
+      ],
+      "wall_clock_s": 5422.857711999997,
+      "n_llm_calls": 8,
+      "n_tool_calls": 0,
+      "n_user_interactions": 0,
+      "trajectory_steps": 0,
+      "token_usage": {
+        "input_tokens": 79351,
+        "input_cache_tokens": 54400,
+        "output_tokens": 6462,
+        "total_tokens": 85813
+      }
+    },
+    "all": {
+      "nodes": [
+        "planning_agent",
+        "parameter_agent",
+        "experiment_agent",
+        "running_node",
+        "report_agent"
+      ],
+      "wall_clock_s": 5453.987962200001,
+      "n_llm_calls": 10,
+      "n_tool_calls": 0,
+      "n_user_interactions": 0,
+      "trajectory_steps": 0,
+      "token_usage": {
+        "input_tokens": 94729,
+        "input_cache_tokens": 54400,
+        "output_tokens": 7415,
+        "total_tokens": 102144
+      }
+    },
+    "report": {
+      "nodes": [
+        "report_agent"
+      ],
+      "wall_clock_s": 31.130250200003502,
+      "n_llm_calls": 2,
+      "n_tool_calls": 0,
+      "n_user_interactions": 0,
+      "trajectory_steps": 0,
+      "token_usage": {
+        "input_tokens": 15378,
+        "input_cache_tokens": 0,
+        "output_tokens": 953,
+        "total_tokens": 16331
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "spec_id": "multi_obj_ctown",
+  "description": "Multi-objective energy-vs-resilience trade-off on C-Town. The two objectives are total pump energy (kWh, 24 h) and the WNTR modified resilience index under PDD. The required pressure is 20 m and the same value is used as MRI Pstar.",
+  "citation": [
+    "Marchi A., Salomons E., Ostfeld A., et al. (2014). Battle of the Water Networks II. J. Water Resour. Plann. Manage., 140(7).",
+    "Sousa J., Muranho J. (2016). Optimal Management of Water Distribution Networks with Simulated Annealing: The C-Town Problem. J. Water Resour. Plann. Manage., 142(5)."
+  ],
+  "objective_parameters": {
+    "inp_path": "ctown.inp",
+    "objectives": ["pump_energy", "modified_resilience_index"],
+    "objective_weights": null,
+    "use_epanet_toolkit": true,
+    "demand_model": "PDD",
+    "pressure_min_constraint": 0.0,
+    "minimum_service_pressure": 20.0,
+    "detection_limit": 1.0,
+    "algorithm": {
+      "name": "NSGA2",
+      "kwargs": {
+        "pop_size": 20,
+        "eliminate_duplicates": true
+      }
+    },
+    "termination": {
+      "type": "n_gen",
+      "value": 20
+    },
+    "seed": 1,
+    "verbose": false
+  },
+  "variable_parameters": [
+    {
+      "name": "pump_speed",
+      "items": "ALL_PUMPS",
+      "setter": "pump_speed_masked",
+      "setter_kwargs": {"group_name": "all"},
+      "timeseries": true,
+      "bounds": {"lb": 0.5, "ub": 1.5}
+    }
+  ],
+  "expected_problem_kind": "multi_objective",
+  "expected_algorithm_family": ["nsga2", "smsemoa"]
+}

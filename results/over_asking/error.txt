@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "D:\Code\workflow to agentic system\experiments\control_transfer_runner.py", line 890, in _run_one
+    out_state = app.invoke(
+                ^^^^^^^^^^^
+  File "D:\Apps\anaconda\envs\EPANET-Agentic_algorithm\Lib\site-packages\langgraph\pregel\main.py", line 3068, in invoke
+    for chunk in self.stream(
+  File "D:\Apps\anaconda\envs\EPANET-Agentic_algorithm\Lib\site-packages\langgraph\pregel\main.py", line 2643, in stream
+    for _ in runner.tick(
+  File "D:\Apps\anaconda\envs\EPANET-Agentic_algorithm\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+  File "D:\Apps\anaconda\envs\EPANET-Agentic_algorithm\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Apps\anaconda\envs\EPANET-Agentic_algorithm\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Apps\anaconda\envs\EPANET-Agentic_algorithm\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Code\workflow to agentic system\graph_workflow.py", line 631, in _wrapper
+    result_state = fn(state, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Code\workflow to agentic system\graph_workflow.py", line 2972, in parameter_agent
+    return _dispatch_node(
+           ^^^^^^^^^^^^^^^
+  File "D:\Code\workflow to agentic system\graph_workflow.py", line 2923, in _dispatch_node
+    return react_fn(state)
+           ^^^^^^^^^^^^^^^
+  File "D:\Code\workflow to agentic system\tools\parameter_react_tools.py", line 466, in parameter_agent_react
+    raise RuntimeError(
+RuntimeError: parameter_agent requires additional user input, but allow_human_input is False. Missing keys: unknown fields
+During task with name 'parameter_agent' and id '1f235d09-2c41-c252-de66-dab11ee2d1e9'

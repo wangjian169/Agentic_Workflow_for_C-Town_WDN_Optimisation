@@ -1,0 +1,43 @@
+{
+  "run_id": "combined_obj_ctown__qwen3-235b-a22b__WRW__seed_581662124__rep_010",
+  "spec_id": "combined_obj_ctown",
+  "task_kind": "combined_single_multi",
+  "combo": "WRW",
+  "modes": {
+    "parameter_agent": "workflow",
+    "experiment_agent": "react",
+    "running_node": "workflow"
+  },
+  "seed": 581662124,
+  "repeat": 10,
+  "model": {
+    "label": "qwen3-235b-a22b",
+    "slug": "qwen3-235b-a22b",
+    "profile": "aliyun_qwen",
+    "model": "qwen3-235b-a22b",
+    "model_provider": "openai",
+    "backend": null,
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "timeout": 300.0,
+    "extra_body": {
+      "enable_thinking": false
+    },
+    "api_key_env": "DASHSCOPE_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 3000
+  },
+  "run_output_dir": "D:\\Code\\workflow to agentic system\\results\\Qwen_235B_instruct\\combined_obj_ctown\\qwen3-235b-a22b\\WRW\\seed_581662124\\rep_010",
+  "console_trace_path": "D:\\Code\\workflow to agentic system\\results\\Qwen_235B_instruct\\combined_obj_ctown\\qwen3-235b-a22b\\WRW\\seed_581662124\\rep_010\\run_console_trace.txt",
+  "include_report_agent": false,
+  "allow_human_input": false,
+  "trace_enabled": true,
+  "trace_llm_io": true,
+  "trace_max_chars": 5000,
+  "react_recursion_limit": 50,
+  "started_at_utc": "20260526T133331Z",
+  "finished_at_utc": "20260526T133501Z",
+  "wall_clock_s": 89.42260169998917,
+  "success": false,
+  "error": "Run completed but required engineering outputs are incomplete.",
+  "node_failures": []
+}

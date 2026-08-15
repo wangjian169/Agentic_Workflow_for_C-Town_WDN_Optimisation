@@ -1,0 +1,43 @@
+Traceback (most recent call last):
+  File "D:\Code\workflow to agentic system\experiments\control_transfer_runner.py", line 890, in _run_one
+    out_state = app.invoke(
+                ^^^^^^^^^^^
+  File "D:\Apps\anaconda\envs\EPANET-Agentic_algorithm\Lib\site-packages\langgraph\pregel\main.py", line 3068, in invoke
+    for chunk in self.stream(
+  File "D:\Apps\anaconda\envs\EPANET-Agentic_algorithm\Lib\site-packages\langgraph\pregel\main.py", line 2643, in stream
+    for _ in runner.tick(
+  File "D:\Apps\anaconda\envs\EPANET-Agentic_algorithm\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+  File "D:\Apps\anaconda\envs\EPANET-Agentic_algorithm\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Apps\anaconda\envs\EPANET-Agentic_algorithm\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Apps\anaconda\envs\EPANET-Agentic_algorithm\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Code\workflow to agentic system\graph_workflow.py", line 625, in _wrapper
+    result_state = fn(state, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Code\workflow to agentic system\graph_workflow.py", line 2986, in running_node
+    return _dispatch_node(
+           ^^^^^^^^^^^^^^^
+  File "D:\Code\workflow to agentic system\graph_workflow.py", line 2918, in _dispatch_node
+    return workflow_fn(state)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\Code\workflow to agentic system\graph_workflow.py", line 2534, in running_node_workflow
+    res, vars_out = run_optimization_from_json(obj, var)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Code\workflow to agentic system\tools\tools.py", line 510, in run_optimization_from_json
+    algo = _choose_algorithm(
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\Code\workflow to agentic system\tools\tools.py", line 387, in _choose_algorithm
+    return _build_supported_algorithm(algo_cfg["name"], kw, n_objectives)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Code\workflow to agentic system\tools\tools.py", line 339, in _build_supported_algorithm
+    _validate_algorithm_family(name_norm, n_objectives)
+  File "D:\Code\workflow to agentic system\tools\tools.py", line 306, in _validate_algorithm_family
+    raise ValueError(
+ValueError: Algorithm GA is not supported for multi-objective runs. Supported algorithms: AGEMOEA, MOEAD, NSGA2, RVEA, SMSEMOA
+During task with name 'running_node' and id 'ff486777-a321-7a13-bf8c-5c71f348d0d1'

@@ -1,0 +1,147 @@
+{
+  "run_id": "combined_obj_ctown__qwen3-14b__RWW__seed_470568584__rep_001",
+  "spec_id": "combined_obj_ctown",
+  "task_kind": "combined_single_multi",
+  "combo": "RWW",
+  "modes": {
+    "parameter_agent": "react",
+    "experiment_agent": "workflow",
+    "running_node": "workflow"
+  },
+  "seed": 470568584,
+  "repeat": 1,
+  "model": {
+    "label": "qwen3-14b",
+    "slug": "qwen3-14b",
+    "profile": "aliyun_qwen",
+    "model": "qwen3-14b",
+    "model_provider": "openai",
+    "backend": null,
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "timeout": 300.0,
+    "extra_body": {
+      "enable_thinking": false
+    },
+    "api_key_env": "DASHSCOPE_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 3000
+  },
+  "run_output_dir": "D:\\Code\\workflow to agentic system\\results\\Qwen_14B_instruct\\combined_obj_ctown\\qwen3-14b\\RWW\\seed_470568584\\rep_001",
+  "console_trace_path": "D:\\Code\\workflow to agentic system\\results\\Qwen_14B_instruct\\combined_obj_ctown\\qwen3-14b\\RWW\\seed_470568584\\rep_001\\run_console_trace.txt",
+  "include_report_agent": false,
+  "allow_human_input": false,
+  "trace_enabled": true,
+  "trace_llm_io": true,
+  "trace_max_chars": 5000,
+  "react_recursion_limit": 50,
+  "wall_clock_s": 57.11933949998638,
+  "success": false,
+  "error": "RuntimeError: parameter_agent requires additional user input, but allow_human_input is False. Missing keys: unknown fields",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Code\\workflow to agentic system\\experiments\\control_transfer_runner.py\", line 890, in _run_one\n    out_state = app.invoke(\n                ^^^^^^^^^^^\n  File \"D:\\Apps\\anaconda\\envs\\EPANET-Agentic_algorithm\\Lib\\site-packages\\langgraph\\pregel\\main.py\", line 3068, in invoke\n    for chunk in self.stream(\n  File \"D:\\Apps\\anaconda\\envs\\EPANET-Agentic_algorithm\\Lib\\site-packages\\langgraph\\pregel\\main.py\", line 2643, in stream\n    for _ in runner.tick(\n  File \"D:\\Apps\\anaconda\\envs\\EPANET-Agentic_algorithm\\Lib\\site-packages\\langgraph\\pregel\\_runner.py\", line 167, in tick\n    run_with_retry(\n  File \"D:\\Apps\\anaconda\\envs\\EPANET-Agentic_algorithm\\Lib\\site-packages\\langgraph\\pregel\\_retry.py\", line 42, in run_with_retry\n    return task.proc.invoke(task.input, config)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Apps\\anaconda\\envs\\EPANET-Agentic_algorithm\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py\", line 656, in invoke\n    input = context.run(step.invoke, input, config, **kwargs)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Apps\\anaconda\\envs\\EPANET-Agentic_algorithm\\Lib\\site-packages\\langgraph\\_internal\\_runnable.py\", line 400, in invoke\n    ret = self.func(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Code\\workflow to agentic system\\graph_workflow.py\", line 631, in _wrapper\n    result_state = fn(state, *args, **kwargs)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Code\\workflow to agentic system\\graph_workflow.py\", line 2972, in parameter_agent\n    return _dispatch_node(\n           ^^^^^^^^^^^^^^^\n  File \"D:\\Code\\workflow to agentic system\\graph_workflow.py\", line 2923, in _dispatch_node\n    return react_fn(state)\n           ^^^^^^^^^^^^^^^\n  File \"D:\\Code\\workflow to agentic system\\tools\\parameter_react_tools.py\", line 466, in parameter_agent_react\n    raise RuntimeError(\nRuntimeError: parameter_agent requires additional user input, but allow_human_input is False. Missing keys: unknown fields\nDuring task with name 'parameter_agent' and id '1f235d09-2c41-c252-de66-dab11ee2d1e9'\n",
+  "node_failures": [],
+  "node_metrics": {},
+  "workflow_token_usage": {},
+  "workflow_token_breakdown": {},
+  "node_telemetry": {
+    "by_node": {},
+    "groups": {
+      "core": {
+        "nodes": [],
+        "wall_clock_s": 0.0,
+        "n_llm_calls": 0,
+        "n_tool_calls": 0,
+        "n_user_interactions": 0,
+        "trajectory_steps": 0,
+        "token_usage": {
+          "input_tokens": 0,
+          "input_cache_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        }
+      },
+      "all": {
+        "nodes": [],
+        "wall_clock_s": 0.0,
+        "n_llm_calls": 0,
+        "n_tool_calls": 0,
+        "n_user_interactions": 0,
+        "trajectory_steps": 0,
+        "token_usage": {
+          "input_tokens": 0,
+          "input_cache_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        }
+      }
+    }
+  },
+  "telemetry_by_group": {
+    "core": {
+      "nodes": [],
+      "wall_clock_s": 0.0,
+      "n_llm_calls": 0,
+      "n_tool_calls": 0,
+      "n_user_interactions": 0,
+      "trajectory_steps": 0,
+      "token_usage": {
+        "input_tokens": 0,
+        "input_cache_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0
+      }
+    },
+    "all": {
+      "nodes": [],
+      "wall_clock_s": 0.0,
+      "n_llm_calls": 0,
+      "n_tool_calls": 0,
+      "n_user_interactions": 0,
+      "trajectory_steps": 0,
+      "token_usage": {
+        "input_tokens": 0,
+        "input_cache_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0
+      }
+    }
+  },
+  "objective_parameters": {},
+  "variable_parameters": [],
+  "experiments": [],
+  "parameter_status": null,
+  "missing_keys": [],
+  "parameter_questions": [],
+  "reference_fallback_used": false,
+  "experiment_results_meta": [],
+  "figure_info": [],
+  "output_completeness": {
+    "has_experiment_results": false,
+    "n_experiment_results": 0,
+    "has_objective_figure": false,
+    "has_variable_figure": false,
+    "n_objective_figures": 0,
+    "n_variable_figures": 0,
+    "n_figures": 0,
+    "required_figure_categories": [
+      "objective"
+    ],
+    "min_objective_figures": 2,
+    "min_variable_figures": 0,
+    "report_present": false,
+    "complete": false
+  },
+  "configuration_trace": [],
+  "output_requirements": {
+    "plot_variable_timeseries": false,
+    "required_figure_categories": [
+      "objective"
+    ],
+    "min_objective_figures": 2,
+    "min_variable_figures": 0
+  },
+  "report_present": false,
+  "process_outputs_present": true,
+  "planner_task_category": null,
+  "planner_needs_experiments": null,
+  "planner_use_experiment_agent": null
+}

@@ -1,0 +1,36 @@
+{
+  "run_id": "multi_obj_ctown__deepseek-chat__RRR__seed_1__rep_001",
+  "spec_id": "multi_obj_ctown",
+  "task_kind": "multi_objective",
+  "combo": "RRR",
+  "modes": {
+    "parameter_agent": "react",
+    "experiment_agent": "react",
+    "running_node": "react"
+  },
+  "seed": 1,
+  "repeat": 1,
+  "model": {
+    "label": "deepseek-chat",
+    "slug": "deepseek-chat",
+    "model": "deepseek:deepseek-chat",
+    "model_provider": null,
+    "backend": null,
+    "temperature": 0.0,
+    "max_tokens": 3000
+  },
+  "run_output_dir": "D:\\Code\\workflow to agentic system\\results\\base_multi_RRR\\multi_obj_ctown\\deepseek-chat\\RRR\\seed_1\\rep_001",
+  "console_trace_path": "D:\\Code\\workflow to agentic system\\results\\base_multi_RRR\\multi_obj_ctown\\deepseek-chat\\RRR\\seed_1\\rep_001\\run_console_trace.txt",
+  "include_report_agent": true,
+  "allow_human_input": true,
+  "trace_enabled": true,
+  "trace_llm_io": true,
+  "trace_max_chars": 5000,
+  "react_recursion_limit": 50,
+  "started_at_utc": "20260514T211355Z",
+  "finished_at_utc": "20260514T225659Z",
+  "wall_clock_s": 6183.694165,
+  "success": true,
+  "error": null,
+  "node_failures": []
+}
