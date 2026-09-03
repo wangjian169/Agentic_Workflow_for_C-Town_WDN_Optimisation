@@ -327,7 +327,7 @@ results/deepseek/combined_obj_ctown/deepseek-chat/RRR/seed_1/rep_001/
 
 If you use this project in your research, please cite:
 
-Wang, J., Liu, S., Fu, G., & Savic, D. (2026). *Where should control sit? Reliability-cost trade-offs in delegating water distribution network optimisation to LLM agents.* **Water Research**, Article 126823. https://doi.org/10.1016/j.watres.2026.126823
+Wang, J., Liu, S., Fu, G., & Savic, D. (2026). *Where should control sit? Reliability-cost trade-offs in delegating water distribution network optimisation to LLM agents.* **Water Research**, 126823. https://doi.org/10.1016/j.watres.2026.126823
 
 <details>
 <summary><b>BibTeX</b></summary>
