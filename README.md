@@ -322,3 +322,23 @@ results/deepseek/combined_obj_ctown/deepseek-chat/RRR/seed_1/rep_001/
 - Temporary Python caches, local IDE settings, local environment files, and
   private supporting trace files are ignored by `.gitignore`.
 - Do not commit real API keys or local credential files.
+
+## 📖 Citation
+
+If you use this project in your research, please cite:
+
+Wang, J., Liu, S., Fu, G., & Savic, D. (2026). *Where should control sit? Reliability-cost trade-offs in delegating water distribution network optimisation to LLM agents.* **Water Research**, Article 126823. https://doi.org/10.1016/j.watres.2026.126823
+
+<details>
+<summary><b>BibTeX</b></summary>
+
+```bibtex
+@article{wang2026control,
+  title     = {Where should control sit? Reliability-cost trade-offs in delegating water distribution network optimisation to LLM agents},
+  author    = {Wang, Jian and Liu, Shuming and Fu, Guangtao and Savic, Dragan},
+  journal   = {Water Research},
+  pages     = {126823},
+  year      = {2026},
+  doi       = {10.1016/j.watres.2026.126823},
+  publisher = {Elsevier}
+}
